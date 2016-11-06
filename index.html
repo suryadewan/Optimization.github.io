@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Optimization</title>
+    <meta name="description" content=/>
+
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="dist/css/flat-ui.css" rel="stylesheet">
+    <link href="docs/assets/css/demo.css" rel="stylesheet">
+
+  
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="dist/js/vendor/html5shiv.js"></script>
+      <script src="dist/js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  
+      </div> <!-- /demo-headline -->
+
+<div class="">
+          <a  class="btn btn-block btn-lg -inverse" style="font-size:2.5em">this is Optimization</a>
+
+          <span class="demo-text-note"></span>
+            <center><p2 class="lead">Have you ever struggled to keep track of your appointments, test day, or any event? We here at Optimization will help you optimize your time by keeping track of your appointment, test dates, events date and more. If you want to keep a reminder? Do it here. Optimization is very user friendly and has a minimalistic design. Begin by clicking the 'Date & Task' button, then enter the current date and how many tasks, this will redirect you to enter the tasks. Once the intial date is added you'll be able to input other tasks for other days. </p2></center>
+
+
+ 
+        </div>
+      </div> <!-- /row -->
+
+    <script>
+
+            function getValue(){
+               var date = prompt("Date");
+               var numberOfTasks = prompt("Number of Tasks");
+
+               document.write("<div id='content' class='lead' style= 'margin-bottom: 30px; font-size: 20px;line-height: 1.46428571; font-family: \"Lato\", Helvetica, Arial, sans-serif; font-weight: 300;'> </div>")
+               var div = document.getElementById("content")
+
+
+               var test = document.createElement("div");
+               test.innerHTML = "<ul>"
+               for (var i = 0; i < numberOfTasks; i++) {
+
+               var task = prompt("Enter your task : "); 
+               test.innerHTML = test.innerHTML + "<li>" + task + "</li>";
+             }
+
+
+               test.innerHTML = test.innerHTML + "</ul>"
+
+                              if (div.innerHTML == "") {
+                  div.innerHTML = "<div>" + date + "</div>"
+               }
+               else {
+                  div.innerHTML = div.innerHTML + "<div><div>" + date + "</div>" + test.innerHTML + "</div>"
+               }
+               
+               if (document.getElementById("button") == null) {
+               document.write("<button id='button' onclick='getValue()''> New Date & Task </button>")
+               }
+
+            }
+
+
+    </script>
+  </body>
+
+  <center><h6>Click the button below to enter your tasks for the day: </h6></center>
+      
+      <form>
+        <center> <input type="button" value="Date & Task" onclick="getValue();"</center>
+      </form>
+</html>
